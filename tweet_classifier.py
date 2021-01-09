@@ -1,15 +1,16 @@
+import string
+from os import getcwd
 
 """
     This program uses the Naive Bayes Classifier to classify the validation set 
     after training on the training set. 
 """
-import string
-from os import getcwd
 
 SEPARATOR = ','
-
 ROOT_DIR = getcwd() + '/'
-
+TEST_DIR = 'tests/'
+TRAINING_DIR = 'training/'
+OUTPUT_DIR = 'output_samples/'
 
 # Extract actual necessary words from the tweet
 def extract_tweet_words(tweet_words):
@@ -32,7 +33,7 @@ def extract_tweet_words(tweet_words):
 
 # Get Training Data from the input file
 def get_tweet_training_data():
-	f = open(ROOT_DIR + "training.csv", "r")
+	f = open(ROOT_DIR + TRAINING_DIR + "training.csv", "r")
 	training_data = []
 	line_count = 0
 	for l in f.readlines():
@@ -45,14 +46,12 @@ def get_tweet_training_data():
 	    tweet_label = tweet_details[1]
 	    tweet_words = extract_tweet_words(tweet_details[2:])
 	    training_data.append([tweet_id, tweet_label, tweet_words])
-	
 	f.close()
-	
 	return training_data
 
 # Get Test Data from the input file
 def get_tweet_test_data():
-	f = open(ROOT_DIR + "test.csv", "r")
+	f = open(ROOT_DIR + TEST_DIR + "test.csv", "r")
 	validation_data = []
 	line_count = 0
 	for l in f.readlines():
@@ -64,10 +63,7 @@ def get_tweet_test_data():
 	    tweet_id = tweet_details[0]
 	    tweet_words = extract_tweet_words(tweet_details[1:])
 	    validation_data.append([tweet_id, '', tweet_words])
-
 	f.close()
-	#print(validation_data)
-
 	return validation_data
 
 # Get list of words in the training data
@@ -83,21 +79,17 @@ def get_words(training_data):
 def get_tweet_word_prob(training_data, label = None):
 	words = get_words(training_data)
 	freq = {}
-
 	for word in words:
 		freq[word] = 1
-
 	total_count = 0
 	for data in training_data:
 		if data[1] == label or label == None:
 			total_count += len(data[2])
 			for word in data[2]:
 				freq[word] += 1
-
 	prob = {}
 	for word in freq.keys():
-		prob[word] = freq[word]*1.0/total_count
-
+		prob[word] = freq[word] * 1.0 / total_count
 	return prob
 
 # Get Probability of given label
@@ -108,7 +100,7 @@ def get_tweet_label_count(training_data, label):
 		total_count += 1
 		if data[1] == label:
 			count += 1
-	return count*1.0/total_count
+	return count * 1.0 / total_count
 
 # Label the test data given the trained parameters Using Naive Bayes Model
 def label_data(test_data, sports_word_prob, politics_word_prob, sports_prob, politics_prob):
@@ -116,28 +108,24 @@ def label_data(test_data, sports_word_prob, politics_word_prob, sports_prob, pol
 	for data in test_data:
 		data_prob_sports = sports_prob
 		data_prob_politics = politics_prob
-		
 		for word in data[2]:
 			if word in sports_word_prob:
 				data_prob_sports *= sports_word_prob[word]
 				data_prob_politics *= politics_word_prob[word]
 			else:
 				continue
-
 		if data_prob_sports >= data_prob_politics:
 			labels.append([data[0], 'Sports', data_prob_sports, data_prob_politics])
 		else:
 			labels.append([data[0], 'Politics', data_prob_sports, data_prob_politics])
-
 	return labels
 
 # Print the labelled test data
 def print_labelled_data(labels):
-	f_out = open(ROOT_DIR + 'submission.csv', 'w')  
+	f_out = open(ROOT_DIR + OUTPUT_DIR + 'submission.csv', 'w')  
         f_out.write('TweetId,Label\n')
 	for [tweet_id, label, prob_sports, prob_politics] in labels:
 		f_out.write('%s,%s\n' % (tweet_id, label))
-
 	f_out.close()
 
 
