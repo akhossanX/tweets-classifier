@@ -1,3 +1,8 @@
+
+<div style="text-align: center">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=akhossanX&repo=data_science_submission&show_owner=true&theme=monokai&show_icons=true" />
+</div> <a href="#"><img align="right" src="https://visitor-badge.glitch.me/badge?page_id=akhossanX.akhossanX" />
+
 # Tweets binary classification
 ## Problem statement  
 <p>Given a dataset of tweets, we are asked to classify them either in Politics or Sports category (Binary Classification). 
