@@ -35,6 +35,7 @@ Time for training the model using the naïve Bayes approach.
 <a href="">
   <img src="./assets/training-preview.png"/>
 </a>
+## Approach in brief words
 We assume that the event of word being in ‘Politics’ or ‘Sports’ categories are independent. In fact, this is intuitive in our case. 
 The probability that a given tweet is under ‘Politics’ is given by multiplying all the probability that each and every word in tweet might be in ’Politics’, this last information is calculated based on the training data. Same thing for ‘Sports’ probability. 
 The decision is made by taking the highest probability. 
