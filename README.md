@@ -4,14 +4,13 @@
        style="width: 100%"/>
 </div> <a href="#"><img align="right" src="https://visitor-badge.glitch.me/badge?page_id=akhossanX.tweets-binary-classifer" />
 
-# Tweets binary classification
-## Problem statement  
+# Problem statement  
 <p>Given a dataset of tweets, we are asked to classify them either in Politics or Sports category (Binary Classification). 
 The data is given in a form of `comma separated values (CSV)` file. 
 After the classification process is done the resulting data must be stored in another csv file. 
 All the tweets must be labeled according to their class (Sports or Politics).<p>
 
-## Data preparation 
+# Data preparation 
 
 Before feeding tweets data to the algorithm to be processed, a first elementary preprocessing is necessary. 
 The tweets text should be represented in a numeric form. 
@@ -28,7 +27,7 @@ So, the tweet in which it could appear will most likely be labeled as ‘Sports�
 By analogy we proceed all the tweets dataset. 
 The uniqueness of words comes into action for performance sake, because the elimination of redundance is so important to save computation time. 
 
-## Model training 
+# Model training 
 
 By now we have the numeric version of the data in a form of matrices 
 Time for training the model using the naïve Bayes approach. 
