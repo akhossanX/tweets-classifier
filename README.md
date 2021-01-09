@@ -1,7 +1,7 @@
 # Tweets binary classification
 ## Problem statement  
 <p>Given a dataset of tweets, we are asked to classify them either in Politics or Sports category (Binary Classification). 
-The data is given in a form of comma separated values (CSV) file. 
+The data is given in a form of `comma separated values (CSV)` file. 
 After the classification process is done the resulting data must be stored in another csv file. 
 All the tweets must be labeled according to their class (Sports or Politics).<p>
 
