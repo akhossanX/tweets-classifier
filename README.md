@@ -33,7 +33,7 @@ By now we have the numeric version of the data in a form of matrices
 Time for training the model using the naïve Bayes approach.
 ## Preview of the training data
 <a href="">
-  <img src="./assets/training.png"/>
+  <img src="./assets/training-preview.png"/>
 </a>
 We assume that the event of word being in ‘Politics’ or ‘Sports’ categories are independent. In fact, this is intuitive in our case. 
 The probability that a given tweet is under ‘Politics’ is given by multiplying all the probability that each and every word in tweet might be in ’Politics’, this last information is calculated based on the training data. Same thing for ‘Sports’ probability. 
