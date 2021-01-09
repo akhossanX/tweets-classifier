@@ -27,10 +27,14 @@ So, the tweet in which it could appear will most likely be labeled as ‘Sports�
 By analogy we proceed all the tweets dataset. 
 The uniqueness of words comes into action for performance sake, because the elimination of redundance is so important to save computation time. 
 
-# Model training 
+# Model training
 
 By now we have the numeric version of the data in a form of matrices 
-Time for training the model using the naïve Bayes approach. 
+Time for training the model using the naïve Bayes approach.
+## Preview of the training data
+<a href="">
+  <img src="./assets/training.png"/>
+</a>
 We assume that the event of word being in ‘Politics’ or ‘Sports’ categories are independent. In fact, this is intuitive in our case. 
 The probability that a given tweet is under ‘Politics’ is given by multiplying all the probability that each and every word in tweet might be in ’Politics’, this last information is calculated based on the training data. Same thing for ‘Sports’ probability. 
 The decision is made by taking the highest probability. 
