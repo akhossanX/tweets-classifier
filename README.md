@@ -1,7 +1,8 @@
 
-<div style="text-align: center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=akhossanX&repo=data_science_submission&show_owner=true&theme=monokai&show_icons=true" />
-</div> <a href="#"><img align="right" src="https://visitor-badge.glitch.me/badge?page_id=akhossanX.akhossanX" />
+<div style="text-align: center; width: 100%">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=akhossanX&repo=data_science_submission&show_owner=true&theme=monokai&show_icons=true"
+       style="width: 100%"/>
+</div> <a href="#"><img align="right" src="https://visitor-badge.glitch.me/badge?page_id=akhossanX.data_science_submission" />
 
 # Tweets binary classification
 ## Problem statement  
