@@ -1,8 +1,8 @@
 
 <div style="text-align: center; width: 100%">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=akhossanX&repo=tweets-classifer&show_owner=true&theme=monokai&show_icons=true"
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=akhossanX&repo=tweets-classifier&show_owner=true&theme=monokai&show_icons=true"
        style="width: 100%"/>
-</div> <a href="#"><img align="right" src="https://visitor-badge.glitch.me/badge?page_id=akhossanX.tweets-classifer" />
+</div> <a href="#"><img align="right" src="https://visitor-badge.glitch.me/badge?page_id=akhossanX.tweets-classifier" />
 
 # Problem statement  
 <p>Given a dataset of tweets, we are asked to classify them either in Politics or Sports category (Binary Classification). 
