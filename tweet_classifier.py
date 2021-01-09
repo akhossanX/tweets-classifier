@@ -7,7 +7,7 @@ import string
 from os import getcwd
 
 SEPARATOR = ','
-#ROOT_DIR = '/Users/akhossan/Downloads/tweet/'
+
 ROOT_DIR = getcwd() + '/'
 
 
