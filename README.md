@@ -35,6 +35,7 @@ Time for training the model using the naïve Bayes approach.
 <a href="">
   <img src="./assets/training-preview.png"/>
 </a>
+
 ## Approach in brief words
 
 We assume that the event of word being in ‘Politics’ or ‘Sports’ categories are independent. In fact, this is intuitive in our case. 
